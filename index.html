@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Catancard by 9kinds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='t
+    ext/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+
+
+<body>
+
+
+    <section class="page-header">
+      <h1 class="project-name">Catancard</h1>
+      <h2 class="project-tagline">A simple web app to generate random resource cards for the game Settlers of Catan - in progress</h2>
+      <a href="https://github.com/9kinds/catancard" class="btn">View on GitHub</a>
+      <a href="https://github.com/9kinds/catancard/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/9kinds/catancard/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h3>BACKGROUND</h3>
+
+		<p>
+		<a href="www.catan.com">Settlers of Catan</a> is a board game in which players strategize where to build settlements in order to obtain needed resources. The board is variable, made up of 19 hexagon tiles representing # different terrains, so the game is different every time it's played. However, the Building Costs cards are always the same for all players - these are basically recipe cards telling you what resources you need in order to build a road, settlement, or city, or to purchase a development card. All players, for example, need 1 Lumber card and 1 Brick card to build a road. We thought it might be interesting to see what happens when each player has their own unique building requirements. 
+		</p>
+
+		<p>
+		Hence, I've made catancard, a simple web app to generate random Building Costs cards. 
+		</p>
+
+	<h3>Planned improvements</h3> 
+
+		<p>
+		There are lots of changes planned: 
+		<ul>
+			<li class="done">4 different cards, instead of 1</li>
+			<li>ability to print a PDF of the 4 cards</li>
+			<li>improved graphics and formatting</li> 
+			<li>a refresh button</li>
+			<li>refactoring</li>
+			<li>et cetera!</li>
+		</ul>
+		</p>
+    </section>
+
+	<section class="main-content">
+    <h3>Catan Custom Cards</h3>
+
+	<p> You can use this site to generate custom Building Costs cards 
+	for use with the awesome game Settlers of Catan.</p>
+
+	<h3>Cards</h3>
+
+<!	<div class="quotebox" >
+
+<p><blockquote> 
+<script type="text/javascript">
+function shuffle(o){
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+
+w = "Wheat";
+o = "Ore";
+l = "Lumber";
+b = "Brick";
+s = "Sheep";
+plus = " + ";
+
+var array1 = new Array(w,o,b,s,l);
+shuffle(array1);
+cardtext = "ROAD = " + array1[0] + plus + array1[1] + 
+			"<p>SETTLEMENT = " + array1[0] + plus + array1[1] + plus
+						   + array1[2] + plus + array1[3] + 
+			"<p>CITY = " + array1[3] + plus + array1[3] + plus + 
+					array1[4]+ plus +array1[4]+ plus +array1[4] + "<p>\
+			DEV CARD = " + array1[2] + plus + array1[3] + plus + array1[4]; 
+document.write(cardtext);
+</script>
+</blockquote></p>
+
+<blockquote><p> 
+<script type="text/javascript">
+function shuffle(o){
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+
+w = "Wheat";
+o = "Ore";
+l = "Lumber";
+b = "Brick";
+s = "Sheep";
+plus = " + ";
+
+var array1 = new Array(w,o,b,s,l);
+shuffle(array1);
+cardtext = "ROAD = " + array1[0] + plus + array1[1] + 
+			"<p>SETTLEMENT = " + array1[0] + plus + array1[1] + plus
+						   + array1[2] + plus + array1[3] + 
+			"<p>CITY = " + array1[3] + plus + array1[3] + plus + 
+					array1[4]+ plus +array1[4]+ plus +array1[4] + "<p>\
+			DEV CARD = " + array1[2] + plus + array1[3] + plus + array1[4]; 
+document.write(cardtext);
+</script>
+</p></blockquote>
+
+<blockquote><p> 
+<script type="text/javascript">
+function shuffle(o){
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+
+w = "Wheat";
+o = "Ore";
+l = "Lumber";
+b = "Brick";
+s = "Sheep";
+plus = " + ";
+
+var array1 = new Array(w,o,b,s,l);
+shuffle(array1);
+cardtext = "ROAD = " + array1[0] + plus + array1[1] + 
+			"<p>SETTLEMENT = " + array1[0] + plus + array1[1] + plus
+						   + array1[2] + plus + array1[3] + 
+			"<p>CITY = " + array1[3] + plus + array1[3] + plus + 
+					array1[4]+ plus +array1[4]+ plus +array1[4] + "<p>\
+			DEV CARD = " + array1[2] + plus + array1[3] + plus + array1[4]; 
+document.write(cardtext);
+</script>
+</p></blockquote>
+
+<blockquote><p> 
+<script type="text/javascript">
+function shuffle(o){
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+
+w = "Wheat";
+o = "Ore";
+l = "Lumber";
+b = "Brick";
+s = "Sheep";
+plus = " + ";
+
+var array1 = new Array(w,o,b,s,l);
+shuffle(array1);
+cardtext = "ROAD = " + array1[0] + plus + array1[1] + 
+			"<p>SETTLEMENT = " + array1[0] + plus + array1[1] + plus
+						   + array1[2] + plus + array1[3] + 
+			"<p>CITY = " + array1[3] + plus + array1[3] + plus + 
+					array1[4]+ plus +array1[4]+ plus +array1[4] + "<p>\
+			DEV CARD = " + array1[2] + plus + array1[3] + plus + array1[4]; 
+document.write(cardtext);
+</script>
+</p></blockquote>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/9kinds/catancard">Catancard</a> is maintained by <a href="https://github.com/9kinds">9kinds</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+</section>
+  
+  </body>
+</html>
