@@ -3,11 +3,17 @@ html {
 	background-color: lightgray;
 	font-family: sans-serif;
 
+.thumbnails {
+  list-style: none;
+}
 
+.done {
+  text-decoration: line-through;
+}
 /* https://css-tricks.com/perfect-full-page-background-image/ */
 
 /* 
-*	background: url(whipstitch.jpg) no-repeat center center fixed; 
+*	background: url(http://www.catan.com/sites/all/themes/catan/images/catanback.jpg) no-repeat center center fixed; 
 *  -webkit-background-size: cover;
 *  -moz-background-size: cover;
 *  -o-background-size: cover;
@@ -15,23 +21,5 @@ html {
 */
 }
 
-div {
-	width: 50%;
-	margin: auto;
-}
-
-blockquote {
-	border: 1px solid white;
-	text-align: center;
-	background-color: white;
-}
-/* .quotebox {
-	display: block;
-	width: 100%;
-	margin: 3px 0 15px 0;
-	border: 1px solid white;
-	text-align: center;
-	padding-top: 14px;
-	padding-bottom: 14px;
 }
 */
