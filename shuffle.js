@@ -26,3 +26,18 @@ cardtext = "<p>ROAD = " + array1[0] + plus + array1[1] +
 	"</p><p>DEV CARD = " + array1[2] + plus + array1[3] + plus + array1[4] + "</p>"; 
 
 document.write(cardtext); 
+
+w2 = '<img src="images/wood.jpg" height="30px" alt="wood">';
+o2 = '<img src="images/ore.jpg" height="30px" alt="ore">';
+l2 = '<img src="images/lumber.jpg" height="30px" alt="lumber">';
+b2 = '<img src="images/brick.jpg" height="30px" alt="brick">';
+s2 = '<img src="images/sheep.jpg" height="30px" alt="sheep">';
+
+var array2 = new Array(w2,o2,b2,s2,l2);
+shuffle(array2);
+
+roadtext = array2[0] + plus + array2[1];
+settletext = array2[0] + array2[1] + array2[2] + array2[3];
+citytext = array2[3] + array2[3] + array2[4] + array2[4]+ array2[4];  
+devtext = array2[2] + array2[3] + array2[4]; 
+

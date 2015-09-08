@@ -13,20 +13,34 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 -->
-	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.4-dist/css/bootstrap.css">
-</head><body>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.4-dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
 <div class='container'>
 	<header class="page-header">
-		<ul class="nav nav-tabs pull-right">
-			<li><a href="index.html">home</a></li>
-			<li>about</li>
-		</ul>
-		<h2 class="project-name">Catancard</h2>
+		<nav class="navbar navbar-default">
+			<p class="navbar-text h3">catancard</p>
+        	<ul class="nav navbar-nav navbar-right">
+        		<li><a href="index.html">home</a></li>
+        		<li class="dropdown">
+          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">projects <span class="caret"></span></a>
+          			<ul class="dropdown-menu">
+            			<li class="active"><a href="#">catancard</a></li>
+            			<li class="disabled"><a href="#">tinyjournal</a></li>
+            			<li class="disabled"><a href="#">modplan</a></li>
+            			<li role="separator" class="divider"></li>
+            			<li><a href="https://github.com/9kinds">GitHub</a></li>
+          			</ul>
+        		</li>
+      		</ul>
+    	</nav>
+		
     </header>
 
 	<section class="main-content">
 
-	<p> You can use this site to generate custom Building Costs cards 
+	<p> You can use this site to generate random Building Costs cards 
 	for use with the awesome game Settlers of Catan.</p>	
 
 <!	<div class="quotebox" >
@@ -45,14 +59,14 @@
 
 <!-- <p><blockquote>  -->
 <div class="row">
-	<div class="col-md-4 card">
+	<div class="col-md-4 col-md-offset-1 card">
 		<p class="cardtitle">Building Costs<p>
 		<script src="shuffle.js">
 			document.write(cardtext)	
 		</script>
 	</div>
 
-	<div class="col-md-4 card">
+	<div class="col-md-4 col-md-offset-1 card">
 		<p class="cardtitle">Building Costs<p>
 		<script src="shuffle.js">
 			document.write(cardtext); 
@@ -61,32 +75,39 @@
 </div>
 
 <div class="row">
-	<div class="col-md-4 card">
+	<div class="col-md-4 col-md-offset-1 card">
 		<p class="cardtitle">Building Costs<p>
 		<script src="shuffle.js">
 			document.write(cardtext); 
 		</script>
 	</div>
 
-	<div class="col-md-4 card">
+	<div class="col-md-4 col-md-offset-1 card">
 		<p class="cardtitle">Building Costs<p>
-		<script src="shuffle.js">
-			document.write(cardtext); 
-		</script>
+			<!--
+			Road = 
+			<script src="shuffle.js">document.ImageName.src = "images/wood.jpg"</script>
+			-->
+			<script src="shuffle.js">document.write(cardtext)</script>
 	</div>
 </div>
 
-<input type="button" value="shuffle cards" onClick="window.location.reload()">
+<div class="row">
+<div class="col-md-8 col-md-offset-1" id="shuffle-button">
+	<input type="button" value="shuffle cards" onClick="window.location.reload()">
+</div>
+</div>
+</section>
 
-   <section class="main-content">
+<section class="main-content">
       <h3>Background</h3>
 
 		<p>
-		<a href="www.catan.com">Settlers of Catan</a> is a board game in which players strategize where to build settlements in order to obtain needed resources. The board is variable, made up of 19 hexagon tiles representing 6 different terrains, so the game is different every time it's played. However, the Building Costs cards are always the same for all players - these are basically recipe cards telling you what resources you need in order to build a road, settlement, or city, or to purchase a development card. All players, for example, need 1 Lumber card and 1 Brick card to build a road. We thought it might be interesting to see what happens when each player has their own unique building requirements. 
+		<a href="www.catan.com">Settlers of Catan</a> is a board game in which players strategize where to build settlements in order to obtain needed resources. The board is variable, made up of 19 hexagon tiles representing 6 different terrains, so the game is different every time it's played. However, the Building Costs cards are always the same for all players - these are basically recipe cards telling you what resources you need in order to build a road, settlement, or city, or to purchase a development card. All players, for example, need 1 Lumber card and 1 Brick card to build a road.  
 		</p>
 
 		<p>
-		Hence, I've made catancard, a simple web app to generate random Building Costs cards. 
+		We thought it might be interesting to see what happens when each player has their own unique building requirements. Hence, I made catancard, a simple web app to generate random Building Costs cards. 
 		</p>
 
 	<h3>Planned Improvements</h3> 
@@ -97,7 +118,7 @@
 			<li class="done">4 different cards, instead of 1</li>
 			<li>ability to print a PDF of the 4 cards</li>
 			<li>improved graphics and formatting</li> 
-			<li>a refresh button</li>
+			<li class="done">a refresh button</li>
 			<li>refactoring</li>
 			<li>et cetera!</li>
 		</ul>
@@ -113,7 +134,6 @@
 
 </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
-	<script src="/shuffle.js"></script>
+	<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
