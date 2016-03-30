@@ -1,31 +1,39 @@
-// thanks to
-// http://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript
+// thanks to 
+// http://stackoverflow.com/a/12646864
+function durst_shuffle(array) {
+	// starting with index of array last element in the array 
+	for (var i = array.length - 1; i > 0; i--) {
+		// generate random number within range of array length
+		var	randomIndex = Math.floor( Math.random() * (i+1) );
+		// set temp value to same value as last item in the array 
+		var temporaryValue = array[i];
+		// now set last slot in array to contain value of random index
+		array[i] = array[randomIndex];
+		// then set that random index slot to contain the temp value, i.e. the old last item
+		array[randomIndex] = temporaryValue;
+	}
+	return array;
+}
+
+w = "<img src='images/wheat.jpg' height='35px' alt='wheat'>";
+o = "<img src='images/ore.jpg' height='35px' alt='ore'>";
+l = "<img src='images/wood.jpg' height='35px' alt='lumber'>";
+b = "<img src='images/brick.jpg' height='35px' alt='brick'>";
+s = "<img src='images/wool.jpg' height='35px' alt='sheep'>";
 
 
-function shuffle(o){
-    				for(var j, x, i = o.length; i; 
-    				j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-    				return o;
-					};
+var array = new Array(w,o,b,s,l);
+durst_shuffle(array);
 
-w = "Wheat";
-o = "Ore";
-l = "Lumber";
-b = "Brick";
-s = "Sheep";
-plus = " + ";
+road = array[0] + array[1];
+settlement = array[0] + array[1] + array[2] + array[3];
+city = array[3] + array[3] +  array[4] + array[4] + array[4];
+devcard = array[2] + array[3] + array[4];
 
-var array1 = new Array(w,o,b,s,l);
-shuffle(array1);
-
-cardtext = "<p>ROAD = " + array1[0] + plus + array1[1] + 
-	"</p><p>SETTLEMENT = " + array1[0] + plus + array1[1] + plus
-	+ array1[2] + plus + array1[3] + 
-	"</p><p>CITY = " + array1[3] + plus + array1[3] + plus + 
-	array1[4]+ plus +array1[4]+ plus +array1[4] + 
-	"</p><p>DEV CARD = " + array1[2] + plus + array1[3] + plus + array1[4] + "</p>"; 
-
-document.write(cardtext); 
+document.getElementById("road-items").innerHTML = road;
+document.getElementById("sett-items").innerHTML = settlement;
+document.getElementById("city-items").innerHTML = city;
+document.getElementById("devc-items").innerHTML = devcard;
 
 w2 = '<img src="images/wood.jpg" height="30px" alt="wood">';
 o2 = '<img src="images/ore.jpg" height="30px" alt="ore">';
@@ -33,11 +41,5 @@ l2 = '<img src="images/lumber.jpg" height="30px" alt="lumber">';
 b2 = '<img src="images/brick.jpg" height="30px" alt="brick">';
 s2 = '<img src="images/sheep.jpg" height="30px" alt="sheep">';
 
-var array2 = new Array(w2,o2,b2,s2,l2);
-shuffle(array2);
-
-roadtext = array2[0] + plus + array2[1];
-settletext = array2[0] + array2[1] + array2[2] + array2[3];
-citytext = array2[3] + array2[3] + array2[4] + array2[4]+ array2[4];  
-devtext = array2[2] + array2[3] + array2[4]; 
+ 
 
